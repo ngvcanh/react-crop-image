@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import ImageCropProvider from './CropImageWrapper/Context';
+// import ImageCrop from './CropImageWrapper/ImageCrop';
+
+import { CropImageWrapper } from "./Fixed/CropImageWrapper";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-100 h-screen flex justify-center items-center">
+      {/* <ImageCropProvider>
+        <ImageCrop />
+      </ImageCropProvider> */}
+      <CropImageWrapper
+        oldImage="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_640.jpg"
+      />
     </div>
   );
 }
